@@ -37,11 +37,11 @@ class ListItem extends Component{
                     }}
 
                     >
-                        <Text>ID:{this.props.item.id}</Text>
-                        <Text>Name products:{this.props.item.name}</Text>
-                        <Text>Price:{this.props.item.price}</Text>
-                        <Text>Amount:{this.props.item.amount}</Text>
-                        <Text>Date:{this.props.item.dateAdd}</Text>
+                        <Text>ID: {this.props.item.id}</Text>
+                        <Text>Name products: {this.props.item.nameSell}</Text>
+                        <Text>Price: {this.props.item.allprice}</Text>
+                        <Text>Amount: {this.props.item.allamounted}</Text>
+                        <Text>Date sell: {this.props.item.dateSell}</Text>
                     </View>
                 </TouchableOpacity>
             </Swipeout>
@@ -49,7 +49,7 @@ class ListItem extends Component{
     }
 }
 
-export default class ListProducts extends Component{
+export default class ListSell extends Component{
     constructor(props){
         super(props)
         let listData = []
@@ -67,7 +67,7 @@ export default class ListProducts extends Component{
     }
 
     getData=()=>{
-       const listData =  realm.objects('Info')
+       const listData =  realm.objects('Sell')
         return listData
     } 
     

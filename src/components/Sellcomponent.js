@@ -9,23 +9,23 @@ import {
 } from 'react-native'
 import Modal from 'react-native-modalbox'
 import ActionButton  from 'react-native-circular-action-menu'
-import Addbutton from './Addbutton'
-import ListProducts from './ListProducts'
+import ListSell from './ListSell'
+import AddSell from './AddSell'
 
-export default class Revenue extends Component{
+export default class Sellcomponent extends Component{
 
     onPressAdd(){
-        this.refs.Addbutton.showAddModal()
+        this.refs.AddSell.showAddSell()
     }
 
     render(){
         return(
             <View style={styles.container}>
                <ScrollView>
-                    <ListProducts/>
+                    <ListSell/>
                </ScrollView>
 
-               <Addbutton ref='Addbutton'/>
+               <AddSell ref='AddSell'/>
 
                <ActionButton
                     style={styles.actionBtn}

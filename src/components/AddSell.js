@@ -44,7 +44,7 @@ export default class AddModal extends Component {
     showAddSell = () => {
         this.refs.myModal.open()
     }
-
+//commit
     render() {
 
         return (
